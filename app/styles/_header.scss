@@ -8,6 +8,8 @@ header{
     }
 }
 
+
+
 .svg-shop-dims { width: 24px; height: 24px; }
 
 .navigation-section{
@@ -135,9 +137,62 @@ header{
 
 
 
+.content-header{
+    display: flex;        
+    align-items: end;
+    justify-content: end;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-top: 118px;
+    position: relative;
+
+    &__title{
+        @include main-font-lora(60px, $main-black, 700);
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+    }
+
+    &__subtitle{
+        @include main-font-poppins(24px, $desactive-text, 400);
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        padding: 32px 0 72px;
+    }
+
+    &__btn{
+        @include button(600, 24px, 36px, $white, 22px, 98px, 22px, 48px, 8px, $main-green);
+        letter-spacing: 0.06em;
+        position: relative;
+        transition: 0.3s;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: calc( 50% - 8px );
+            right: 48px;
+            background: url('../img-dist/sprite.svg#btn-arr-header') no-repeat;
+            width: 24px;
+            height: 20px;
+        }
+
+        &:hover{
+            background-color: $dark-green;
+        }
+    }
+    &__item{
+        max-width: 582px;
+    }
+}
 
 
 
+.header-main-img{
+    position: absolute;
+    top: 62px;
+    left: -290px;
+    
 
-
-
+    img{
+        background-size: cover;
+    }
+}

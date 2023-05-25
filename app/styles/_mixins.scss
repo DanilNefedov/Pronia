@@ -6,8 +6,8 @@
 }
 
 
-@mixin main-font-lora($font, $size, $color, $weight){
-    font-family: $font;
+@mixin main-font-lora($size, $color, $weight){
+    font-family: "Lora";
     font-size: $size;
     color: $color;
     font-weight: $weight;
@@ -23,10 +23,10 @@
 }
 
 @mixin padding($top, $right, $bot, $left){
-    padding: $top, $right, $bot, $left;
+    padding: $top $right $bot $left;
 }
 
-@mixin button($family, $weight, $size, $height, $color, $top, $right, $bot, $left, $bor-rad, $bcg-col){
+@mixin button($weight, $size, $height, $color, $top, $right, $bot, $left, $bor-rad, $bcg-col, $family: 'Poppins'){
     font-family: $family;
     font-weight: $weight;
     font-size: $size;
