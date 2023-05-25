@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/dist/Lora-Bold.woff2') format('woff2'),
+        url('../fonts/dist/Lora-Bold.woff') format('woff'),
+        url('../fonts/Lora-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/dist/Lora-Medium.woff2') format('woff2'),
+        url('../fonts/dist/Lora-Medium.woff') format('woff'),
+        url('../fonts/Lora-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/dist/Lora-Regular.woff2') format('woff2'),
+        url('../fonts/dist/Lora-Regular.woff') format('woff'),
+        url('../fonts/Lora-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/dist/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/dist/Poppins-Bold.woff') format('woff'),
+        url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/dist/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/dist/Poppins-Medium.woff') format('woff'),
+        url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/dist/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/dist/Poppins-Regular.woff') format('woff'),
+        url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/dist/Poppins-SemiBold.woff2') format('woff2'),
+        url('../fonts/dist/Poppins-SemiBold.woff') format('woff'),
+        url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-style: normal;
+    border-color: $main-bg-white;
+    @include main-font-poppins(16px, $desactive-text, 400);
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.second-header{
+    @include text-opt(40px, $main-black, 56px, 500, "Lora")
+}
+.text-second-header{
+    @include text-opt(16px, $desactive-text, 26px, 400, "Poppins")
+}
+
+.third-header{
+    @include text-opt(24px, $main-black, 32px, 500, "Lora")
+}
+.text-third-header{
+    @include text-opt(16px, $desactive-text, 26px, 400, "Poppins")
+}
+
+.header-swiper{
+    @include text-opt(24px, $desactive-text, 32px, 700, "Lora")
+}
+
+.header-swiper-active{
+    @include text-opt(24px, $white, 32px, 700, "Lora")
+}
+.text-swiper-active{
+    @include text-opt(16px, $white, 24px, 400, "Poppins")
+}
+
+.price{
+    @include text-opt(26px, $main-green, 22px, 500, "Lora")
+}
+.price-active{
+    @include text-opt(26px, $white, 22px, 500, "Lora")
+}
+
+.header-footer{
+    @include text-opt(24px, $main-black, 32px, 500, "Lora")
+}
+.footer-links{
+    @include text-opt(16px, $desactive-text, 46px, 500, "Poppins")
+}
+
+
+
+.section-first-content{
+    background: $main-header-grad;
+    // background-size: 1445px 800px;
+    border-radius: 0px 0px 0px 450px;
+    position: relative;
+}
+
+.line-bg{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.svg-main-bg-dims { width: 509px; height: 481px; }

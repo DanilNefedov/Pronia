@@ -1,0 +1,57 @@
+@mixin main-font-poppins($size, $color, $weight){
+    font-family: 'Poppins';
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+
+@mixin main-font-lora($font, $size, $color, $weight){
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+
+@mixin text-opt($size, $color, $height, $weight, $family){
+    font-size: $size;
+    color:$color;
+    line-height: $height;
+    font-weight: $weight;
+    font-family: $family;
+}
+
+@mixin padding($top, $right, $bot, $left){
+    padding: $top, $right, $bot, $left;
+}
+
+@mixin button($family, $weight, $size, $height, $color, $top, $right, $bot, $left, $bor-rad, $bcg-col){
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color:$color;
+    @include padding($top, $right, $bot, $left);
+    border-radius: $bor-rad;
+    background-color: $bcg-col;
+}
+
+
+
+@mixin arrow-circl($bcg-col, $bor-rad: 50%, $url){
+    background-color: $bcg-col;
+    border-radius: $bor-rad;
+    box-shadow: $active-shadow-arr-circl;
+    position: relative;
+    border: 1px solid $main-green;
+
+    &:after {
+        content: "";
+        display: block;
+        background: url($url), no-repeat;
+        position: absolute;
+        top:50%;
+        right: 50%;
+    }
+}
