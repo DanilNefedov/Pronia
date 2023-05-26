@@ -172,18 +172,18 @@ h6 {
 }
 
 .second-header{
-    @include text-opt(40px, $main-black, 56px, 500, "Lora")
+    @include text-opt(40px, $main-black, 56px, 500, "Lora");
+    text-transform: capitalize;
 }
 .text-second-header{
-    @include text-opt(16px, $desactive-text, 26px, 400, "Poppins")
+    @include text-opt(16px, $desactive-text, 26px, 400, "Poppins");
+    text-transform: capitalize;
 }
 
 .third-header{
     @include text-opt(24px, $main-black, 32px, 500, "Lora")
 }
-.text-third-header{
-    @include text-opt(16px, $desactive-text, 26px, 400, "Poppins")
-}
+
 
 .header-swiper{
     @include text-opt(24px, $desactive-text, 32px, 700, "Lora")
@@ -213,10 +213,20 @@ h6 {
 
 
 .section-first-content{
-    background: $main-header-grad;
-    // background-size: 1445px 800px;
-    border-radius: 0px 0px 0px 450px;
     position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 61%;
+        width: 70%;
+        border-radius: 0px 0px 0px 450px;
+        background: linear-gradient(90deg, rgba(201, 253, 214, 0.01) 1%, #C9FDD6 100%);
+        z-index:-2;
+    }
 }
 
 .line-bg{

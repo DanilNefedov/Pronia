@@ -1,0 +1,38 @@
+.benefits{
+    width: 100%;
+    padding: 100px 10px;
+    background-color: $main-bg-green;
+
+    &__header{
+        text-align: center;
+        margin-bottom: 59px;
+    }
+
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    &__item{
+        max-width: 285px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+        &--img{
+            width: 55px;
+            height: 55px;
+        }
+
+        &--subtitle{
+            text-align: center;
+        }
+
+        &--title{
+            padding: 28px 0 14px;
+        }
+    }
+}
