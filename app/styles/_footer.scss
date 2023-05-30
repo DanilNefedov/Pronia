@@ -1,24 +1,84 @@
-.footer-container{
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
+.footer{
+    background:linear-gradient(180deg, #D8E9D6 0%, rgba(216, 233, 214, 0) 100%);
+    padding: 43px 0 73px;
 
-    a{
-        color: $main-text;
-        margin: 5px 0;
-        display: inline-block;
+    &__container{
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+
+       
+
+
+        @media screen and (max-width: 560px) {
+            display: block;
+
+            .info-company, .company, .support, .contact-us{
+                margin: 20px 0;
+            }
+        }
     }
 
 
-    @media screen and (max-width: 560px) {
-        display: block;
+    &__info-company{
+        max-width: 300px;
+    }
 
-        .info-company, .company, .support, .contact-us{
-            margin: 20px 0;
+    &__subtitle{
+        padding: 46px 0 24px;
+    }
+
+    &__social{
+        display: flex;
+
+        &--link{
+            width: 31px;
+            height: 31px;
+            border: 1px solid $main-green;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            img{
+                width: 23px;
+                height: 23px;
+            }
+        }
+    
+    }
+
+    .third-header{
+        padding-bottom: 28px;
+    }
+    
+    .footer__contact-us--header{
+        padding-bottom: 0;
+    }
+
+    ul li a {
+        padding: 10px 0;
+        display: block;
+        color: $desactive-text;
+        transition: 0.3s;
+
+        &:hover{
+            color:$main-black;
+        }
+    }
+
+    .footer-telephone{
+        @include main-font-lora(36px, $dark-green, 400);
+        margin-bottom: 7px;
+
+        &:hover{
+            color: $dark-green;
         }
     }
 }
 
-.info-company{
-    max-width: 200px;
+
+.foot-marg{
+    margin-top: 30px;
 }
+

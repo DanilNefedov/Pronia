@@ -1,0 +1,126 @@
+.comments {
+    padding: 100px 0 144px;
+    background-color: $main-bg-green;
+
+    .comments-container {
+        position: relative;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__subtitle {
+        max-width: 663px;
+        padding: 16px 0 48px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.comments-swiper {
+    &__wrapper {
+        height: 200px;
+    }
+
+
+    .swiper-slide {
+        background-color: $main-bg-green;
+        color: $white;
+        width: 702px;
+        padding: 40px 70px 64px 56px;
+        border-radius: 10px;
+        transform-style: flat !important;
+        background: #F1FEF4;
+        border: 1px solid #E5E5E5;
+    }
+
+
+    &__header {
+        color: $main-black;
+        position: static;
+        text-align: center;
+        padding: 30px 0 20px;
+    }
+
+    &__stars {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+
+        img {
+            width: 38px;
+            height: 38px;
+        }
+    }
+
+    .swiper-slide-active {
+        background-color: $white;
+        border: none;
+    }
+
+    &__comment {
+        color: #555;
+        text-align: center;
+    }
+
+    &__img-user {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+
+}
+
+.swiper-button-prev-comments {
+    @include arrow-circl($white, 50%, '../img-dist/sprite.svg#arr-left-green', '../img-dist/sprite.svg#arr-left-white', 1, 0);
+    bottom: 40px;
+    left: -10%;
+
+    &:hover{
+        box-shadow: none;
+        background-color: $main-green;
+
+    }
+    &:hover::after{
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+        background: url('../img-dist/sprite.svg#arr-left-white');
+    }
+}
+
+.swiper-button-next-comments {
+    @include arrow-circl($white, 50%, '../img-dist/sprite.svg#arr-right-green', '../img-dist/sprite.svg#arr-right-white', 1, 0);
+    right: -10%;
+
+    &:hover{
+        box-shadow: none;
+        background-color: $main-green;
+    }
+
+    &:hover::after{
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+        background: url('../img-dist/sprite.svg#arr-right-white');
+    }
+}
+
+.swiper-button-next-comments,
+.swiper-button-prev-comments {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+    top:calc(50% + 40px);
+    transition: 0.3s;
+    cursor: pointer;
+}

@@ -75,6 +75,30 @@ function stylePosImg(width, posBlock){
   `
 }
 
+
+
+const swiperComments = new Swiper(".comments-swiper", {
+  initialSlide: 1,
+  loop: true,
+  speed: 1000,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+      rotate: 0,
+      stretch: 80,
+      depth: 903,
+      modifier: 1,
+      slideShadows: false,
+  },
+
+  navigation: {
+      nextEl: '.swiper-button-next-comments',
+      prevEl: '.swiper-button-prev-comments',
+  },
+});
+
 // const accordionTitles = document.querySelectorAll(".accordionTitle");
 
 // accordionTitles.forEach((accordionTitle) => {
