@@ -2,6 +2,9 @@
     padding: 100px 0 104px;
     background-color: $main-bg-green;
 
+    @media screen and (max-width:970px) {
+        padding: 50px 0 ;
+    }
 
     &__header {
         text-align: center;
@@ -24,7 +27,17 @@
 .selling-swiper {
     cursor: auto;
 
+    @media screen and (max-width:1350px) {
+        max-width: 720px;
 
+        @media screen and (max-width:900px) {
+            max-width: 346px;
+
+            @media screen and (max-width:500px){
+                max-width: 200px;
+            }
+        }
+    }
 
     &__slide {
         padding: 24px 29px 29px 29px;
@@ -34,6 +47,14 @@
         text-align: center;
         margin-top: 400px;
         cursor: pointer;
+
+        @media screen and (max-width:1350px) {
+            max-height: 340px;
+
+            @media screen and (max-width:500px) {
+                padding: 12px 14px 14px 14px;
+            }
+        }
 
         &::after,
         &::before {
@@ -92,7 +113,11 @@
         }
 
         &:hover .selling-swiper__buy--price{
-            @include text-opt(26px, $white, 22px, 500, "Lora")
+            @include text-opt(26px, $white, 22px, 500, "Lora");
+
+            @media screen and (max-width:500px) {
+                font-size: 18px;
+            }
         }
 
         &:hover .selling-swiper__buy--btn{
@@ -126,6 +151,17 @@
         top: -370px;
         // left: auto;
         right: auto;
+
+        @media screen and (max-width:500px) {
+            top: -330px;
+        }
+
+        img{
+            @media screen and (max-width:500px) {
+                top: -330px;
+                max-height: 380px;
+            }
+        }
     }
 
     &__header {
@@ -146,34 +182,60 @@
     width: 40px;
     height: 40px;
     background-color: white;
-    position: absolute;
-    bottom: 112px;
+    bottom: 100px;
     cursor: pointer;
 }
 
 .swiper-button-next-selling{
-    right: -105%;
+    right: -5%;
     @include arrow-circl($white, 50%, '../img-dist/sprite.svg#arr-right-green', '../img-dist/sprite.svg#arr-right-white', 1, 0);
     transition: 0.3s;
     box-shadow: none;
+    position: absolute;
+
+
+    @media screen and (max-width:1350px) {
+        right: 5%;
+    }
 
     &:hover{
-      @include arrow-circl($main-green, 50%, '../img-dist/sprite.svg#arr-right-green', '../img-dist/sprite.svg#arr-right-white', 0, 1);
-      box-shadow: none;
+        box-shadow: none;
+        background-color: $main-green;
+    }
+
+    &:hover::after{
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+        background: url('../img-dist/sprite.svg#arr-right-white');
     }
 
 }
 
 .swiper-button-prev-selling{
-    left: -108px;
+    left: -5%;
     @include arrow-circl($white, 50%, '../img-dist/sprite.svg#arr-left-green', '../img-dist/sprite.svg#arr-left-white', 1, 0);
     transition: 0.3s;
-    bottom: 152px;
     box-shadow: none;
+    position: absolute;
+
+
+    @media screen and (max-width:1350px) {
+        left: 5%;
+    }
 
     &:hover{
-      @include arrow-circl($main-green, 50%, '../img-dist/sprite.svg#arr-left-green', '../img-dist/sprite.svg#arr-left-white', 0, 1);
-      box-shadow: none;
+        box-shadow: none;
+        background-color: $main-green;
+
+    }
+    &:hover::after{
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+        background: url('../img-dist/sprite.svg#arr-left-white');
     }
 }
 
@@ -203,15 +265,26 @@
 .selling-swiper__buy{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &--price{
         transition: 0.3s;
+
+        @media screen and (max-width:500px) {
+           
+            font-size: 18px;
+        }
     }
 
     &--btn{
         transition: 0.3s;
         @include button(500, 18px, 22px, $main-black, 8px, 48px, 8px, 25px, 5px, transparent);
         position: relative;
+
+        @media screen and (max-width:500px) {
+            padding: 4px 24px 4px 12px;
+            font-size: 14px;
+        }
 
         &:hover{
             background-color: $dark-green;
@@ -227,6 +300,10 @@
             right: 25px;
             opacity: 1;
             transition: 0.3s;
+
+            @media screen and (max-width:500px) {
+                right: 5px;
+            }
         }
 
         &::before{
@@ -239,6 +316,10 @@
             right: 25px;
             opacity: 0;
             transition: 0.3s;
+
+            @media screen and (max-width:500px) {
+                right: 5px;
+            }
         }
     }
 }

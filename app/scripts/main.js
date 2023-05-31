@@ -1,9 +1,11 @@
 const hamburger = document.getElementById('menu');
 const menu = document.getElementById('container-navigation')
+const body = document.getElementsByTagName('body');
 
 const toggleMenu = () => {
   menu.classList.toggle('active-menu');
   hamburger.classList.toggle('active-humb')
+  body[0].classList.toggle('stop-scrolling')
 }
 
 hamburger.addEventListener('click', e => {
@@ -25,27 +27,53 @@ document.addEventListener('click', e => {
 
 
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 16,
+  slidesPerView: 1,
+  spaceBetween: 12,
   loop: true,
 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  breakpoints: {
+    720: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    }
+
+    
+  }
 });
 
 
 
 const swiperSelling = new Swiper(".mySwiper-selling", {
-  slidesPerView: 3,
-  spaceBetween: 36,
+  slidesPerView: 1,
+  spaceBetween: 26,
   // loop: true,
 
   navigation: {
     nextEl: ".swiper-button-next-selling",
     prevEl: ".swiper-button-prev-selling",
   },
+
+  breakpoints: {
+    900: {
+      slidesPerView: 2,
+      spaceBetween: 36,
+    },
+    1350: {
+      slidesPerView: 3,
+      spaceBetween: 36,
+    }
+
+    
+  }
 });
 
 
@@ -88,7 +116,7 @@ const swiperComments = new Swiper(".comments-swiper", {
   coverflowEffect: {
       rotate: 0,
       stretch: 80,
-      depth: 903,
+      depth: 1303,
       modifier: 1,
       slideShadows: false,
   },
@@ -97,6 +125,14 @@ const swiperComments = new Swiper(".comments-swiper", {
       nextEl: '.swiper-button-next-comments',
       prevEl: '.swiper-button-prev-comments',
   },
+
+  breakpoints: {
+    730:{
+      coverflowEffect: {
+        depth: 803,
+      },
+    }
+  }
 });
 
 // const accordionTitles = document.querySelectorAll(".accordionTitle");

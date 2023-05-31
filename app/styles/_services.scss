@@ -1,5 +1,9 @@
 .services{
-    padding: 100px 0;
+    padding: 100px 10px;
+
+    @media screen and (max-width:970px) {
+        padding: 50px 10px;
+    }
 
     &__header{
         text-align: center;
@@ -10,6 +14,10 @@
         text-align: center;
         max-width: 663px;
         margin: 0 auto;
+
+        @media screen and (max-width:970px) {
+            padding: 16px 40px;
+        }
     }
 
     .services-container{
@@ -22,7 +30,14 @@
     display: flex;
     justify-content: space-between;
     
+    @media screen and (max-width:1200px) {
+        padding: 0 20px;
 
+        @media screen and (max-width: 990px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     // &__text-block:nth-of-type(2){
     //     padding: 48px 0 74px;
 
@@ -31,6 +46,14 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+
+        @media screen and (max-width:1200px) {
+            max-width: 250px;
+
+            @media screen and (max-width: 990px) {
+                max-width: 100%;
+            }
+        }
 
         &--subtitle{
             padding-top: 14px;
@@ -42,6 +65,10 @@
         max-width: 411px;
         max-height: 406px;
         position: relative;
+
+        @media screen and (max-width: 990px) {
+            margin-right: 0;
+        }
         
         img{
             width: 100%;
@@ -64,5 +91,11 @@
     &__text-block{
         max-width: 353px;
         flex-grow: 1;
+
+        @media screen and (max-width: 990px) {
+            max-width:100%;
+            text-align: center;
+            padding-bottom: 20px;
+        }
     }
 }
