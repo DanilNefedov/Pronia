@@ -26,6 +26,18 @@
 
 
     <link rel="stylesheet" href="styles/style.min.css">
+
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+        "three": "https://unpkg.com/three@0.153.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.153.0/examples/jsm/"
+        }
+    }
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -254,13 +266,13 @@
 
         <div class="content-header "> 
             <div class="container">
-                 <div class="header-main-img">
-                    <picture>
+                 <div class="header-main-img" id="test">
+                    <!-- <picture>
                         <source srcset="./img-dist/main-plant.avif" type="image/avif">
                         <source srcset="./img-dist/main-plant.webp" type="image/webp">
                         <source srcset="./img-dist/main-plant.png" type="image/png">
                         <img src="./img-dist/main-plant.png" alt="Plant">
-                    </picture>
+                    </picture> -->
                 </div>
 
 
@@ -1274,7 +1286,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span>
            
                     </div>
            
@@ -1312,7 +1324,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#empty-star-gray" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#empty-star-gray" alt="star"></span>
            
                     </div>
            
@@ -1350,7 +1362,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span>
            
             
            
@@ -1390,7 +1402,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#empty-star-gray" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#empty-star-gray" alt="star"></span>
            
             
            
@@ -1430,7 +1442,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span>
            
             
            
@@ -1470,7 +1482,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#empty-star-gray" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#empty-star-gray" alt="star"></span>
            
             
            
@@ -1510,7 +1522,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span>
            
             
            
@@ -1550,7 +1562,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#empty-star-gray" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#empty-star-gray" alt="star"></span>
            
             
            
@@ -1590,7 +1602,7 @@
            
                     <div class="comments-swiper__stars">
            
-                        <span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="../img-dist/sprite.svg#green-star-full" alt="star"></span>
+                        <span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span><span><img src="./img-dist/sprite.svg#green-star-full" alt="star"></span>
            
             
            
@@ -1862,6 +1874,8 @@
     
 </div>
 <script src="scripts/main.min.js"></script>
+
+<script type="module" src="scripts/modules/main-modules.min.js"></script>
 </body>
 </html>
 

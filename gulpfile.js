@@ -42,10 +42,23 @@ function buildScripts(){
         'node_modules/imask/dist/imask.js',
         'app/scripts/**/*.js',
         '!app/scripts/**/*.min.js',
+        '!app/scripts/modules/**/*.js',
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/scripts'))
+    .pipe(browserSync.stream())
+}
+
+
+function buildScriptsModules(){
+    return src([
+        'app/scripts/modules/**/*.js',
+        '!app/scripts/modules/**/*.min.js'
+    ])
+    .pipe(concat('main-modules.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/scripts/modules'))
     .pipe(browserSync.stream())
 }
 
@@ -120,6 +133,11 @@ function favicton(){
     .pipe(dest('dist/favicon'))
 }
 
+function models(){
+    return src('app/models/**/*.*')
+    .pipe(dest('dist/models'))
+}
+
 
 function watching(){
     // function browsync
@@ -131,8 +149,10 @@ function watching(){
     // function browsync
     watch(['app/styles/**/*.scss'], buildStyles)
     watch(['app/scripts/**/*.js', '!app/scripts/**/main.min.js'], buildScripts)
+    watch(['app/scripts/modules/**/*.js', '!app/scripts/modules/main-modules.min.js'], buildScriptsModules)
     watch(['app/img'], buildImages)
     watch(['app/favicon'], favicton)
+    watch(['app/models'], models)
     watch(['app/components/**/*.html', 'app/pages/**/*.html'], pagesHTML)
     watch(['app/**/*.html']).on('change', browserSync.reload)
 }
@@ -148,6 +168,7 @@ function build(){
     return src([
         'app/styles/style.min.css',
         'app/scripts/main.min.js',
+        'app/scripts/modules/main-modules.min.js',
         'app/img-dist/**/*.*',
         '!app/img-dist/**/*.svg',
         'app/img-dist/**/sprite.svg',
@@ -163,7 +184,7 @@ function build(){
 
 
 
-exports.default = parallel(buildStyles, buildScripts, buildImages, pagesHTML, favicton, watching);
+exports.default = parallel(buildStyles, buildScripts, buildScriptsModules, buildImages, pagesHTML, favicton, models, watching);
 
 exports.build = series(cleanDist, build);
 exports.spriteSvg = spriteSvg
