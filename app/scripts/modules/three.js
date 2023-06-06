@@ -11,7 +11,7 @@ let linkBuild = '';
 
 if (window.location.href === 'http://localhost:3000/') {
 	linkBuild = '../../models/scene.gltf';
-} else if (window.location.href === 'https://danilnefedov.github.io/Furniture/') {
+} else if (window.location.href === 'https://danilnefedov.github.io/Pronia/') {
 	linkBuild = '../Pronia/models/scene.gltf';
 } else {
 	linkBuild = '../../models/scene.gltf';
