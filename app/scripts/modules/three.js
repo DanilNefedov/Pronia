@@ -5,6 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // 811 x 1022
 const container = document.getElementById('container-block-three')
 const mainCanv = document.getElementById('test');
+const loaderPage = document.getElementById('loader')
 
 
 let linkBuild = '';
@@ -42,6 +43,7 @@ loader.load(`${linkBuild}`, function (gltf) {
 	scene.add(model);
 	renderer.render(scene, camera)
 	animate();
+	loaderPage.style.display = 'none';
 }, undefined, function (error) {
 	console.error(error);
 });
