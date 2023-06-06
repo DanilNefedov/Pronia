@@ -191,6 +191,9 @@ exports.default = parallel(buildStyles, buildScripts, buildScriptsModules, build
 exports.build = series(cleanDist, build);
 exports.spriteSvg = spriteSvg
 exports.buildFonts = buildFonts
+
+
+
 exports.buildScripts = buildScripts
 
 
