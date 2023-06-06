@@ -184,12 +184,17 @@ function build(){
 
 
 
+
+
 exports.default = parallel(buildStyles, buildScripts, buildScriptsModules, buildImages, pagesHTML, favicton, models, watching);
 
 exports.build = series(cleanDist, build);
 exports.spriteSvg = spriteSvg
 exports.buildFonts = buildFonts
 exports.buildScripts = buildScripts
+
+
+
 
 //first - gulp | w8
 //second - gulp build  | w8
