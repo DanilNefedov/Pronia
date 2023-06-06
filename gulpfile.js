@@ -176,7 +176,8 @@ function build(){
         'app/pages/**/*.html',
         '!app/pages/index.html',
         'app/index.html',
-        'app/favicon/**/*.*'
+        'app/favicon/**/*.*',
+        'app/models/**/*.*'
     ], {base: 'app'})
     .pipe(dest('dist'))
 }
