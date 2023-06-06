@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-arr-left-black-dims { width: 15px; height: 13px; }
+ .svg-arr-left-green-dims { width: 15px; height: 13px; }
+ .svg-arr-left-white-dims { width: 15px; height: 13px; }
+ .svg-arr-right-black-dims { width: 15px; height: 13px; }
+ .svg-arr-right-green-dims { width: 15px; height: 13px; }
+ .svg-arr-right-white-dims { width: 15px; height: 13px; }
+ .svg-benefits-car-dims { width: 50px; height: 44px; }
+ .svg-benefits-medal-dims { width: 55px; height: 55px; }
+ .svg-benefits-tick-dims { width: 55px; height: 55px; }
+ .svg-btn-arr-header-dims { width: 12px; height: 21px; }
+ .svg-car-delivery-dims { width: 61px; height: 54px; }
+ .svg-comms-dims { width: 117px; height: 90px; }
+ .svg-coms-dims { width: 117px; height: 90px; }
+ .svg-empty-star-gray-dims { width: 22px; height: 22px; }
+ .svg-green-star-full-dims { width: 13px; height: 12px; }
+ .svg-green-star-gull-dims { width: 13px; height: 12px; }
+ .svg-main-bg-dims { width: 509px; height: 481px; }
+ .svg-shop-dims { width: 24px; height: 24px; }
+ .svg-social-fb-dims { width: 8px; height: 13px; }
+ .svg-social-inst-dims { width: 16px; height: 16px; }
+ .svg-social-print-dims { width: 13px; height: 16px; }
+ .svg-social-utb-dims { width: 14px; height: 10px; }
+ .svg-star-full-dims { width: 18px; height: 19px; }
+ .svg-user-dims { width: 46px; height: 46px; }
+ .svg-white-star-full-dims { width: 13px; height: 12px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="arr-left-black">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arr-left-black" class="svg-arr-left-black-dims" alt="arr-left-black">
+                    </div>
+                    <h2>arr-left-black, </h2>
+                </li>
+             <li title="arr-left-green">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arr-left-green" class="svg-arr-left-green-dims" alt="arr-left-green">
+                    </div>
+                    <h2>arr-left-green, </h2>
+                </li>
+             <li title="arr-left-white">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arr-left-white" class="svg-arr-left-white-dims" alt="arr-left-white">
+                    </div>
+                    <h2>arr-left-white, </h2>
+                </li>
+             <li title="arr-right-black">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arr-right-black" class="svg-arr-right-black-dims" alt="arr-right-black">
+                    </div>
+                    <h2>arr-right-black, </h2>
+                </li>
+             <li title="arr-right-green">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arr-right-green" class="svg-arr-right-green-dims" alt="arr-right-green">
+                    </div>
+                    <h2>arr-right-green, </h2>
+                </li>
+             <li title="arr-right-white">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arr-right-white" class="svg-arr-right-white-dims" alt="arr-right-white">
+                    </div>
+                    <h2>arr-right-white, </h2>
+                </li>
+             <li title="benefits-car">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#benefits-car" class="svg-benefits-car-dims" alt="benefits-car">
+                    </div>
+                    <h2>benefits-car, </h2>
+                </li>
+             <li title="benefits-medal">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#benefits-medal" class="svg-benefits-medal-dims" alt="benefits-medal">
+                    </div>
+                    <h2>benefits-medal, </h2>
+                </li>
+             <li title="benefits-tick">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#benefits-tick" class="svg-benefits-tick-dims" alt="benefits-tick">
+                    </div>
+                    <h2>benefits-tick, </h2>
+                </li>
+             <li title="btn-arr-header">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#btn-arr-header" class="svg-btn-arr-header-dims" alt="btn-arr-header">
+                    </div>
+                    <h2>btn-arr-header, </h2>
+                </li>
+             <li title="car-delivery">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#car-delivery" class="svg-car-delivery-dims" alt="car-delivery">
+                    </div>
+                    <h2>car-delivery, </h2>
+                </li>
+             <li title="comms">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#comms" class="svg-comms-dims" alt="comms">
+                    </div>
+                    <h2>comms, </h2>
+                </li>
+             <li title="coms">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#coms" class="svg-coms-dims" alt="coms">
+                    </div>
+                    <h2>coms, </h2>
+                </li>
+             <li title="empty-star-gray">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#empty-star-gray" class="svg-empty-star-gray-dims" alt="empty-star-gray">
+                    </div>
+                    <h2>empty-star-gray, </h2>
+                </li>
+             <li title="green-star-full">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#green-star-full" class="svg-green-star-full-dims" alt="green-star-full">
+                    </div>
+                    <h2>green-star-full, </h2>
+                </li>
+             <li title="green-star-gull">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#green-star-gull" class="svg-green-star-gull-dims" alt="green-star-gull">
+                    </div>
+                    <h2>green-star-gull, </h2>
+                </li>
+             <li title="main-bg">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#main-bg" class="svg-main-bg-dims" alt="main-bg">
+                    </div>
+                    <h2>main-bg, </h2>
+                </li>
+             <li title="shop">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#shop" class="svg-shop-dims" alt="shop">
+                    </div>
+                    <h2>shop, </h2>
+                </li>
+             <li title="social-fb">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#social-fb" class="svg-social-fb-dims" alt="social-fb">
+                    </div>
+                    <h2>social-fb, </h2>
+                </li>
+             <li title="social-inst">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#social-inst" class="svg-social-inst-dims" alt="social-inst">
+                    </div>
+                    <h2>social-inst, </h2>
+                </li>
+             <li title="social-print">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#social-print" class="svg-social-print-dims" alt="social-print">
+                    </div>
+                    <h2>social-print, </h2>
+                </li>
+             <li title="social-utb">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#social-utb" class="svg-social-utb-dims" alt="social-utb">
+                    </div>
+                    <h2>social-utb, </h2>
+                </li>
+             <li title="star-full">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#star-full" class="svg-star-full-dims" alt="star-full">
+                    </div>
+                    <h2>star-full, </h2>
+                </li>
+             <li title="user">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#user" class="svg-user-dims" alt="user">
+                    </div>
+                    <h2>user, </h2>
+                </li>
+             <li title="white-star-full">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#white-star-full" class="svg-white-star-full-dims" alt="white-star-full">
+                    </div>
+                    <h2>white-star-full, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Thu, 01 Jun 2023 11:40:28 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
