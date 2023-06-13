@@ -253,7 +253,19 @@ h6 {
     position: relative;
 }
 
+#model-loader{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color: transparent;
 
+    .lds-ring{
+        background-color: transparent;
+    }
+}
 .container-loader{
     z-index: 10000;
     top:0;

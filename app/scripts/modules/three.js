@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // 811 x 1022
 const container = document.getElementById('container-block-three')
 const mainCanv = document.getElementById('test');
-const loaderPage = document.getElementById('loader')
+const loaderPageModel = document.getElementById('model-loader')
 
 
 let linkBuild = '';
@@ -36,6 +36,7 @@ camera.position.set(0.6, 0.4, 0.6)
 let model
 const loader = new GLTFLoader();
 loader.load(`${linkBuild}`, function (gltf) {
+	loaderPageModel.style.display = 'none';
 	model = gltf.scene.children[0]
 	model.position.set(0, -0.2, 0)
 	camera.aspect = width / height;
@@ -43,7 +44,6 @@ loader.load(`${linkBuild}`, function (gltf) {
 	scene.add(model);
 	renderer.render(scene, camera)
 	animate();
-	loaderPage.style.display = 'none';
 }, undefined, function (error) {
 	console.error(error);
 });

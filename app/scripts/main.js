@@ -1,6 +1,14 @@
 const hamburger = document.getElementById('menu');
 const menu = document.getElementById('container-navigation')
 const body = document.getElementsByTagName('body');
+const loaderPage = document.getElementById('loader')
+
+
+
+window.onload = () =>{
+  loaderPage.style.display = 'none';
+}
+
 
 const toggleMenu = () => {
   menu.classList.toggle('active-menu');
